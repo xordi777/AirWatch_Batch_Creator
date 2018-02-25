@@ -1,0 +1,10 @@
+.btn {
+    -fx-text-fill: white;
+    -fx-background-color: #2e6da4;
+}
+
+.btn-cancel {
+    -fx-text-fill: white;
+    -fx-background-color: red;
+}
+
