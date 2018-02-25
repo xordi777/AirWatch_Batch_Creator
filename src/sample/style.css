@@ -14,7 +14,7 @@
 }
 
 .setSize {
-    -fx-font-size: 4em;
+    -fx-font-size: 1em;
 }
 
 .btn-submit:hover {
