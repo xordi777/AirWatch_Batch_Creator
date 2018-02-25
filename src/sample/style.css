@@ -1,10 +1,26 @@
-.btn {
-    -fx-text-fill: white;
-    -fx-background-color: #2e6da4;
+.btn-submit {
+    -fx-background-color: blue;
 }
 
 .btn-cancel {
-    -fx-text-fill: white;
     -fx-background-color: red;
 }
 
+.btn-submit, .btn-cancel {
+    -fx-text-fill: white;
+    -fx-padding: 1em, 2em, 1em, 2em;
+    -fx-background-radius: 1em;
+
+}
+
+.setSize {
+    -fx-font-size: 4em;
+}
+
+.btn-submit:hover {
+    -fx-background-color: #0000CC;
+}
+
+.btn-cancel:hover {
+    -fx-background-color: #CC0000;
+}

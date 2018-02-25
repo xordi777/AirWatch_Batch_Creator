@@ -6,6 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import javax.swing.*;
+
 public class Main extends Application {
 
     @Override
@@ -16,6 +18,7 @@ public class Main extends Application {
         scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
         primaryStage.setScene(scene);
         primaryStage.show();
+        primaryStage.sizeToScene();
     }
 
 
