@@ -15,11 +15,18 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("AirWatch Batch Creator");
-        Scene scene = new Scene(root, 600, 275);
+        Scene scene;
 
+        if(checkScreenSize()) {
+            scene = new Scene(root, 1920, 1200);
+
+        } else {
+            scene = new Scene(root, 600, 275);
+
+        }
         //Determine which stylesheet to load (depends on monitor resolution)
         if(checkScreenSize()) {
-            scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
+            scene.getStylesheets().add(getClass().getResource("style-hidpi.css").toExternalForm());
         } else {
             scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
         }
@@ -32,8 +39,8 @@ public class Main extends Application {
     // Return true if the monitor resultion is higher than FHD.
     private boolean checkScreenSize() {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        double width = screenSize.getWidth();
-        double height = screenSize.getHeight();
+        double width = screenSize.getWidth()*2;
+        double height = screenSize.getHeight()*2;
 
         if(width > 1920) {
             return true;
@@ -44,4 +51,5 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
     }
+
 }
